@@ -46,9 +46,7 @@ flgen feature <name>
 
 The following folder structure is created:
 
-```
-txt
-CopiarEditar
+```css
 lib/
 ├── core/
 │   ├── animations/
@@ -67,7 +65,6 @@ lib/
 │── main.dart
 │── .env
 └── .env.dev
-
 ```
 
 > Note: You can customize folder and file names based on your project’s needs.
