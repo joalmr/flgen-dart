@@ -1,10 +1,10 @@
 # Changelog
 
-## 1.0.0
+## 0.0.1
 
 - Initial release of `flgen`.
-- Added command-line interface to scaffold:
-  - Core architecture (`flgen core`)
-  - Feature modules (`flgen feature <name>`)
-  - Full architecture and dependencies (`flgen arch`)
-- Includes `.env` support and base project structure for Flutter.
+- Adds a CLI for Flutter architecture scaffolding.
+- Supports:
+  - `flgen core`: sets up core folder structure.
+  - `flgen feature <name>`: generates feature/module structure.
+  - `flgen base`: full setup including dependencies and env files.
