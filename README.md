@@ -17,27 +17,21 @@ This repository provides scripts to automate the setup of a base architecture fo
 
 ### 1. Set up the complete architecture
 
-```bash
-bash
-CopiarEditar
+```dart
 flgen base
 
 ```
 
 ### 2. Set up only the core structure
 
-```bash
-bash
-CopiarEditar
+```dart
 flgen core
 
 ```
 
 ### 3. Add a new feature or module
 
-```bash
-bash
-CopiarEditar
+```dart
 flgen feature <name>
 
 ```
