@@ -15,6 +15,12 @@ This repository provides scripts to automate the setup of a base architecture fo
 
 ## ⚙️ Installation & Usage
 
+You can install `flgen` globally using:
+
+```dart
+dart pub global activate flgen
+```
+
 ### 1. Set up the complete architecture
 
 ```dart

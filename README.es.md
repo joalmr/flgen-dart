@@ -15,6 +15,12 @@ Este repositorio proporciona scripts para automatizar la creación de la arquite
 
 ## ⚙️ Instalación y uso
 
+You can install `flgen` globally using:
+
+```dart
+dart pub global activate flgen
+```
+
 ### 1. Configurar la arquitectura completa
 
 ```dart
