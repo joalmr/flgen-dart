@@ -75,4 +75,4 @@ lib/
 
 ## 🤝 Contributions
 
-Contributions are welcome! If you'd like to improve or add new functionality, feel free to open an [issue](https://github.com/joalmr/flgen-dart/issues) or submit a [pull request](https://github.com/joalmr/flgen-dart/pulls).# flgen-dart
+Contributions are welcome! If you'd like to improve or add new functionality, feel free to open an [issue](https://github.com/joalmr/flgen-dart/issues) or submit a [pull request](https://github.com/joalmr/flgen-dart/pulls).
