@@ -10,8 +10,11 @@ Future<void> runFeature(String featureName) async {
     print('Creado: $ruta');
   }
 
-  await Directory('lib/features/$featureName/data/datasources').create(recursive: true);
-  await crearArchivo('lib/features/$featureName/data/datasources/${featureName}_datasources.dart', '''
+  await Directory('lib/features/$featureName/data/datasources')
+      .create(recursive: true);
+  await crearArchivo(
+      'lib/features/$featureName/data/datasources/${featureName}_datasources.dart',
+      '''
 //
 abstract class DataSource {
   // ...
@@ -22,8 +25,10 @@ class DataSourceImpl implements DataSource {
 }
 ''');
 
-  await Directory('lib/features/$featureName/data/models').create(recursive: true);
-  await crearArchivo('lib/features/$featureName/data/models/${featureName}_models.dart', '''
+  await Directory('lib/features/$featureName/data/models')
+      .create(recursive: true);
+  await crearArchivo(
+      'lib/features/$featureName/data/models/${featureName}_models.dart', '''
 //
 import "../../domain/entities/${featureName}_entities.dart";
 
@@ -32,8 +37,11 @@ class Model extends Entity {
 }
 ''');
 
-  await Directory('lib/features/$featureName/data/repositories_impl').create(recursive: true);
-  await crearArchivo('lib/features/$featureName/data/repositories_impl/${featureName}_repositories_impl.dart', '''
+  await Directory('lib/features/$featureName/data/repositories_impl')
+      .create(recursive: true);
+  await crearArchivo(
+      'lib/features/$featureName/data/repositories_impl/${featureName}_repositories_impl.dart',
+      '''
 //
 import "../datasources/${featureName}_datasources.dart";
 import "../../domain/repositories/${featureName}_repositories.dart";
@@ -45,24 +53,33 @@ class RepositoryImp implements Repository {
 }
 ''');
 
-  await Directory('lib/features/$featureName/domain/entities').create(recursive: true);
-  await crearArchivo('lib/features/$featureName/domain/entities/${featureName}_entities.dart', '''
+  await Directory('lib/features/$featureName/domain/entities')
+      .create(recursive: true);
+  await crearArchivo(
+      'lib/features/$featureName/domain/entities/${featureName}_entities.dart',
+      '''
 //
 class Entity {
     // ...
 }
 ''');
 
-  await Directory('lib/features/$featureName/domain/repositories').create(recursive: true);
-  await crearArchivo('lib/features/$featureName/domain/repositories/${featureName}_repositories.dart', '''
+  await Directory('lib/features/$featureName/domain/repositories')
+      .create(recursive: true);
+  await crearArchivo(
+      'lib/features/$featureName/domain/repositories/${featureName}_repositories.dart',
+      '''
 //
 abstract class Repository {
   // ...
 }
 ''');
 
-  await Directory('lib/features/$featureName/domain/usecases').create(recursive: true);
-  await crearArchivo('lib/features/$featureName/domain/usecases/${featureName}_usecases.dart', '''
+  await Directory('lib/features/$featureName/domain/usecases')
+      .create(recursive: true);
+  await crearArchivo(
+      'lib/features/$featureName/domain/usecases/${featureName}_usecases.dart',
+      '''
 //
 import "../repositories/${featureName}_repositories.dart";
 
@@ -73,8 +90,10 @@ class UseCase {
 }
 ''');
 
-  await Directory('lib/features/$featureName/presentation/pages').create(recursive: true);
-  await Directory('lib/features/$featureName/presentation/widgets').create(recursive: true);
+  await Directory('lib/features/$featureName/presentation/pages')
+      .create(recursive: true);
+  await Directory('lib/features/$featureName/presentation/widgets')
+      .create(recursive: true);
 
   print('¡Estructura de feature creada!');
 }

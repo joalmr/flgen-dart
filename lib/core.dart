@@ -8,7 +8,8 @@ Future<void> runCore() async {
     print('Creado: $ruta');
   }
 
-  print('Iniciando la creación de la estructura de carpetas y archivos Dart...');
+  print(
+      'Iniciando la creación de la estructura de carpetas y archivos Dart...');
 
   await Directory('lib/core/animation').create(recursive: true);
   await crearArchivo('lib/core/animation/animation.dart', '// animation\n');
