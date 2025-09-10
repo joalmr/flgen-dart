@@ -22,12 +22,10 @@ Future<void> runBase() async {
     'flutter_dotenv'
   ];
 
-  for (final paquete in paquetes) {
-    print('Agregando paquete: $paquete...');
-    final result = await Process.run('flutter', ['pub', 'add', paquete]);
-    stdout.write(result.stdout);
-    stderr.write(result.stderr);
-  }
+  print('Agregando paquetes: ${paquetes.join(', ')}...');
+  final result = await Process.run('flutter', ['pub', 'add', ...paquetes]);
+  stdout.write(result.stdout);
+  stderr.write(result.stderr);
 
   await crearArchivo('.env', '# PRODUCTION');
   await crearArchivo('.env.dev', '# DEVELOPMENT');
